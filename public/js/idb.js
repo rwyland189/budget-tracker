@@ -21,7 +21,7 @@ request.onsuccess = function(event) {
     // check if app is online, if yes run updateBudget() function to send all local db data to api
     if (navigator.onLine) {
         // not created yet, commented out
-        // updateBudget();
+        updateBudget();
     }
 };
 
@@ -86,3 +86,6 @@ function updateBudget() {
         }
     };
 }
+
+// listen for app coming back online
+window.addEventListener('online', updateBudget);
