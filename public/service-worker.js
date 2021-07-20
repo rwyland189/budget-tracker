@@ -45,3 +45,10 @@ self.addEventListener('activate', function (e) {
         })
     )
 })
+
+self.addEventListener('fetch', function (e) {
+    console.log('fetch request : ' + e.request.url)
+    e.respondWith(
+        
+    )
+})
